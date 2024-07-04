@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body class="bg-dark text-light">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom mx-5 px-5 rounded ">
+            <div class="col-md-3 mb-2 mb-md-0">
+              <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+                <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+              </a>
+            </div>
+      
+            <div class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+              <h3 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif " ><strong> Virtual Calculator </strong></h3>
+            </div>
+      
+            <div class="col-md-3 text-end d-flex align-items-center justify-content-around">
+                <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0;">Connect with me:</p>
+                <div class="d-flex gap-2">
+                    <a href="https://www.linkedin.com/in/hazsyl1/">
+                        <button type="button" class="btn btn-primary">LinkedIn</button>
+                    </a>
+                    <a href="https://github.com/HazSyl1">
+                        <button type="button" class="btn btn-primary">GitHub</button>
+                    </a>
+                </div>
+          </header>
+          <main style="display: flex;flex-direction: column; justify-content: center; align-items: center; height: 80vh; ">
+            <img style="display: block;" src="{{url_for('video_function')}}" alt="Video Footage" width="50%" height="auto">
+          
+          <p  style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0;">Refresh to restart!</p>
+          <div style="margin-top: 20px;">
+            <ul style="list-style: none; padding-left: 0;">
+              {% for item in history %}
+                <li style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0;">{{item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          </main>
+    </body>
+</html>
