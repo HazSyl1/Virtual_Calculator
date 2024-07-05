@@ -3,7 +3,7 @@ import cv2 as cv
 from main import serve
 
 app=Flask(__name__)
-camera=cv.VideoCapture(0)
+camera=cv.VideoCapture(2)
 camera.set(3,1280) #width
 camera.set(4,720) #height
 history=[]
