@@ -32,14 +32,18 @@
                     </a>
                 </div>
           </header>
-          <main style="display: flex;flex-direction: column; justify-content: center; align-items: center; height: 80vh; ">
-            <img style="display: block;" src="{{url_for('video_function')}}" alt="Video Footage" width="50%" height="auto">
-          
+          <main style="display: flex;flex-direction: column; justify-content: center; align-items: center; height: 100%; ">
+            <!-- <img style="display: block;" src="{{url_for('video_function')}}" alt="Video Footage" width="50%" height="auto"> -->
+            <!-- <video style="border:2px solid #333; border-radius: 8px; margin:10px;" id="video"  autoplay></video> -->
+            <img id="processed-video" alt="Processed Frame"  width="50%" height="auto">
+            <script src="{{ url_for('static',filename='serve.js') }}"></script>
+
+
           <p  style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0;">Refresh to restart!</p>
           <div style="margin-top: 20px;">
-            <ul style="list-style: none; padding-left: 0;">
+            <ul id="history-list" style="list-style: none; padding-left: 0;">
               {% for item in history %}
-                <li style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0;">{{item }}</li>
+                <li style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0;">{{item}}</li>
               {% endfor %}
             </ul>
           </div>
